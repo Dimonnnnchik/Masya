@@ -147,6 +147,7 @@ function generateBubble() {
         bubbleParent = document.querySelector('.bubble-maker__wrapper');
     let size = 0;
     let visibleWidth = window.innerWidth;
+
     while (size < 50) {
         size = Math.floor(Math.random() * 90);
     }
@@ -158,7 +159,7 @@ function generateBubble() {
     bubble.style.zIndex = '100000000';
 
     bubble.style.bottom = '0';
-    bubble.style.left = (Math.random() * visibleWidth - 50) + 'px';
+    bubble.style.left = (Math.random() * visibleWidth - size) + 'px';
 
     randomCatImg(size, bubble);
 
