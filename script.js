@@ -159,7 +159,7 @@ function generateBubble() {
     bubble.style.zIndex = '100000000';
 
     bubble.style.bottom = '0';
-    bubble.style.left = (Math.random() * visibleWidth - size + 10) + 'px';
+    bubble.style.left = (Math.random() * visibleWidth - size - 10) + 'px';
 
     randomCatImg(size, bubble);
 
