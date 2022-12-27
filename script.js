@@ -178,7 +178,7 @@ function generateBubble() {
 
 
     let timer = 0;
-    while (timer < 20000) {
+    while (timer < 24000) {
         timer = Math.random() * 30000;
     }
     setTimeout(() => {
