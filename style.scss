@@ -308,16 +308,9 @@ header{
 
 //masia blocks
 
-#masia-line{ 
-    @media screen and (max-width:1200px) {
-        height:60vh;
-    }
-    @media screen and (max-width:800px) {
-        height:100vh;
-    }
 
-}
 .masia {
+    position: relative;
     padding-top: 100px;
     margin-bottom: 80px;
     &__wrapper {
@@ -342,25 +335,39 @@ header{
     display: flex;
     justify-content: space-around;
     align-items: stretch;
-
     
-    position: relative;
+    
+    
     @media screen and (max-width:1200px) {
         flex-wrap: wrap;
     }
 }
+#masia-line{
+    top: 50%;
+    @media (max-width: 1200px) {
+        height: 40vh ;
+    }
+    
+}
 .line-through-blocks{
-    height:90vh ;
+    
     
     width: 100vw;
-    height: 35vh;
+    height: 40vh;
     background-color: #c1947d;
     position: absolute;
     z-index: -1;
-    top: 28%;
-    
-    @media screen and (max-width:800px) {
-        height: 70vh;
+    top: 25%;
+    @media (min-height: 1200px) {
+        height: 25vh ;
+        top: 26%;
+    }
+    @media (max-width: 1180px) {
+        top: 35%;
+        height: 40vh;
+    }
+    @media (max-width: 800px) {
+        height: 0 !important;
     }
 }
 .story-block {
@@ -489,27 +496,14 @@ header{
 
 
 .cat-facts {
-
-		&__wrapper {
-            display: flex;
-            justify-content: space-around;
-            gap: 10%;
-            margin: 150px auto 50px auto;
-            position: relative;
-            @media screen  and (max-width: 1180px){
-                flex-wrap: wrap;
-            
-            }
-            @media screen and(max-width: 1045px) {
-                margin: 250px auto 50px auto;
-            }
-            
-		}
+    
+    
+    
+		
         .facts-heading{
-            position: absolute;
+            
             margin: 0 auto;
-            left: 0;
-            right: 0;
+            
             top: -120px;
             text-align: center;
             @media screen and(max-width: 1045px) {
@@ -526,6 +520,19 @@ header{
                     }
             }
         }
+}
+.facts-wrapper{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    gap: 10%;
+    margin: 50px auto;
+    
+    @media screen  and (max-width: 1180px){
+        flex-wrap: wrap;
+    
+    }
+    
 }
 .fact-half1 {
     margin: 0 auto;

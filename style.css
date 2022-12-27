@@ -281,18 +281,8 @@ header {
   background-color: rgb(122, 119, 119);
 }
 
-@media screen and (max-width: 1200px) {
-  #masia-line {
-    height: 60vh;
-  }
-}
-@media screen and (max-width: 800px) {
-  #masia-line {
-    height: 100vh;
-  }
-}
-
 .masia {
+  position: relative;
   padding-top: 100px;
   margin-bottom: 80px;
 }
@@ -314,7 +304,6 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: stretch;
-  position: relative;
 }
 @media screen and (max-width: 1200px) {
   .masia-blocks {
@@ -322,18 +311,38 @@ header {
   }
 }
 
+#masia-line {
+  top: 50%;
+}
+@media (max-width: 1200px) {
+  #masia-line {
+    height: 40vh;
+  }
+}
+
 .line-through-blocks {
-  height: 90vh;
   width: 100vw;
-  height: 35vh;
+  height: 40vh;
   background-color: #c1947d;
   position: absolute;
   z-index: -1;
-  top: 28%;
+  top: 25%;
 }
-@media screen and (max-width: 800px) {
+@media (min-height: 1200px) {
   .line-through-blocks {
-    height: 70vh;
+    height: 25vh;
+    top: 26%;
+  }
+}
+@media (max-width: 1180px) {
+  .line-through-blocks {
+    top: 35%;
+    height: 40vh;
+  }
+}
+@media (max-width: 800px) {
+  .line-through-blocks {
+    height: 0 !important;
   }
 }
 
@@ -461,28 +470,8 @@ header {
   color: #c1947d;
 }
 
-.cat-facts__wrapper {
-  display: flex;
-  justify-content: space-around;
-  gap: 10%;
-  margin: 150px auto 50px auto;
-  position: relative;
-}
-@media screen and (max-width: 1180px) {
-  .cat-facts__wrapper {
-    flex-wrap: wrap;
-  }
-}
-@media screen and (max-width: 1045px) {
-  .cat-facts__wrapper {
-    margin: 250px auto 50px auto;
-  }
-}
 .cat-facts .facts-heading {
-  position: absolute;
   margin: 0 auto;
-  left: 0;
-  right: 0;
   top: -120px;
   text-align: center;
 }
@@ -498,6 +487,19 @@ header {
 }
 .cat-facts .facts-heading span:hover {
   color: #c1947d;
+}
+
+.facts-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  gap: 10%;
+  margin: 50px auto;
+}
+@media screen and (max-width: 1180px) {
+  .facts-wrapper {
+    flex-wrap: wrap;
+  }
 }
 
 .fact-half1 {
