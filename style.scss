@@ -1,8 +1,8 @@
 *{
     padding: 0;
     margin: 0;
-    font-family: 'Catamaran', sans-serif;
-    font-weight: 400;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
     box-sizing: border-box;
 
 
@@ -18,7 +18,9 @@ li{
 }
 
 
-
+html{
+    scroll-behavior: smooth;
+}
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -39,9 +41,12 @@ li{
     width: 55px;
     height: 4px;
     background-color: aliceblue;
-    margin: 15px auto;
+    margin: 5px auto 15px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+    &:last-child{
+        margin-bottom: 5px;
+    }
 }
 @media screen and(max-width:880px) {
     .burger{
@@ -98,6 +103,7 @@ li{
     top: 0;
     left: 0;
     
+    
 
 }
 header{
@@ -121,9 +127,11 @@ header{
     letter-spacing: 0.1em;
     padding: 10px 15px;
     transition: .2s;
+    border: none;
     &:hover{
         letter-spacing: .15em;
-        box-shadow: 0 0 35px #c1947d;
+        color:  #c1947d;
+        background-color: #c1947d;
     }
     &:active{
         letter-spacing: .05em;
@@ -170,7 +178,7 @@ header{
 }
 .logo {
     margin: auto 0;
-    font-size: 1.7em;
+    font-size: 2em;
     font-weight: 700;
     transition: .5s;
     &:hover{
@@ -188,35 +196,29 @@ header{
 //cat memes section 
 
 .cat-memes {
+    margin: 30px 0;
+    padding: 30px 0;
     .cutie-img{
         min-height: 490px;
-    }
-    padding-top: 100px;
-    
+    } 
     box-sizing: border-box;
     background-color: #f8f6f5;
-    padding-bottom: 20px;
-    
     .cat-wrapper{
-    
-        text-align: center;
-        
+        text-align: center; 
         margin: 0 auto;
-        
-
     }
     #cutie-heading{
     
-        span{
+        
             font-family: 'Cute Font', cursive;
-            font-size: 3em;
+            font-size: 3.3em;
             transition: .5s;
             &:hover{
-            
                 color: #c1947d;
             }
+            
     
-        }
+        
         
     
     }
@@ -306,17 +308,32 @@ header{
 
 //masia blocks
 
+#masia-line{ 
+    @media screen and (max-width:1200px) {
+        height:60vh;
+    }
+    @media screen and (max-width:800px) {
+        height:100vh;
+    }
+
+}
 .masia {
+    padding-top: 100px;
     margin-bottom: 80px;
     &__wrapper {
+        
     margin: 10px auto;  
         max-width: 1300px;
     }
 
     &__heading {
+        font-weight: 500;
         text-align: center;
-        font-size: 2em;
-        margin: 30px 0;
+        font-size: 2.5em;
+        margin: 30px auto;
+        max-width: 800px;
+        margin-top: 50px;
+        margin-bottom: -50px;
         
     }
 }
@@ -324,63 +341,49 @@ header{
     
     display: flex;
     justify-content: space-around;
+    align-items: stretch;
 
-    min-height:100vh ;
+    
     position: relative;
     @media screen and (max-width:1200px) {
         flex-wrap: wrap;
     }
 }
 .line-through-blocks{
+    height:90vh ;
+    
     width: 100vw;
-    height: 40vh;
+    height: 35vh;
     background-color: #c1947d;
     position: absolute;
     z-index: -1;
-    top: 30%;
+    top: 28%;
     
     @media screen and (max-width:800px) {
         height: 70vh;
     }
 }
 .story-block {
+    
     box-shadow: 4px 11px 31px -6px rgba(0,0,0,0.73);
     padding: 20px;
     max-width: 390px;
     margin: 20px 0;
-
-
+    @media screen and (max-width:800px) {
+        max-width: 90%;
+    }
+    background-color: #f8f6f5;
     &__date {
         text-align: center;
         font-size: 2em;
-        font-weight: 500;
+        font-weight: 700;
         
     }
 
     &__text {
         font-size:1.3em ;
     }
-    &:nth-child(1){
-        align-self: flex-start;
-        background-color: #e3e2e2;
-        @media screen and (max-width:1200px) {
-            align-self: center;
-        }
-        
-    }
-    &:nth-child(2){
-        align-self: center;
-        background-color:#313638 ;
-        color: aliceblue;
-        
-    }
-    &:nth-child(3){
-        align-self: flex-end;
-        background-color:#e3deda;
-        @media screen and (max-width:1200px) {
-            align-self: center;
-        }
-    }
+
 
     
 }
@@ -462,13 +465,13 @@ header{
 .table-info {
     margin: 20px 0;
     padding-left: 20px;
-    font-size: 1.8em;
+    font-size: 1.4em;
     color: #4b4b4b99;
 }
 
 .chooshe-cat {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: -60px;
     span{
     
         font-size: 4.5em;
@@ -529,9 +532,20 @@ header{
     display: flex;
     flex-direction: column;
     
-    gap: 50px;
+    gap: 20px;
+    
 }
 .fact-block {
+    &:nth-child(1){
+        @media screen and(max-width: 1200px) {
+            order: 2;
+        }
+    }
+    &:nth-child(2){
+        @media screen and(max-width: 1200px) {
+            order: 1;
+        }
+    }
     border-radius: 5px;
     
     box-shadow: 4px 11px 31px -6px rgb(0 0 0 / 73%);
@@ -574,7 +588,7 @@ header{
 		}
 
 		&__text {
-            max-width: 300px;
+            max-width: 350px;
             font-size: 1.2em;
             padding: 0px 10px;
             text-align: center;
@@ -584,12 +598,14 @@ header{
 		}
 
 		&__img {
+            margin: 0 auto;
             max-width: 300px;
             
             
             img{
+                border-radius: 5px;
                 width: 100%;
-                max-height: 300px;
+                max-height: 200px;
                 object-fit: contain;
                 object-position: center;
                 background-attachment: fixed;
@@ -606,7 +622,8 @@ header{
     gap: 50px;
     margin: 0 auto;
     @media screen  and (max-width: 1180px){
-        margin-top: 50px;
+        margin-top: 30px;
+        gap: 30px;
     }
 
 }
@@ -621,7 +638,8 @@ header{
     object-position: top;
 }
 .where-bubble-come-from{
-    max-width: 200px;
+    text-align: center;
+    max-width: 180px;
     left: 50%;
     bottom: 60%;
     color: rgba(240, 248, 255, 0.54);
@@ -736,8 +754,9 @@ footer{
     width: 100vw;
 }
 .footer-link {
-
+    margin: 0 10px;
     a{
+        min-width: 200px;
         line-height: 1.8em;
         font-size: 1.4em;
         transition: .5s;
@@ -745,5 +764,5 @@ footer{
             color: #c1947d;
         }
     }
-   
+
 }
