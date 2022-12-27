@@ -148,8 +148,14 @@ function generateBubble() {
     let size = 0;
     let visibleWidth = window.innerWidth;
 
+    let leftGap = 0;
+
+
     while (size < 50) {
         size = Math.floor(Math.random() * 90);
+    }
+    while (leftGap < 10 || leftGap >= visibleWidth) {
+        leftGap = (Math.random() * visibleWidth) - (size + 10);
     }
     bubble.classList.add('bubble');
 
@@ -159,7 +165,7 @@ function generateBubble() {
     bubble.style.zIndex = '100000000';
 
     bubble.style.bottom = '0';
-    bubble.style.left = (Math.random() * visibleWidth - size - 10) + 'px';
+    bubble.style.left = leftGap + 'px';
 
     randomCatImg(size, bubble);
 
@@ -170,6 +176,7 @@ function generateBubble() {
 
 
         removeBubbleStyles(bubble);
+        bubble.styleanimationPlayState = 'paused';
         setTimeout(() => {
             showCaught()
             bubble.remove();
