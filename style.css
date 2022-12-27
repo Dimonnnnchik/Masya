@@ -248,6 +248,7 @@ header {
 .cat-memes-holder {
   display: flex;
   max-width: 900px;
+  height: 70%;
   margin: 0 auto;
   position: relative;
   box-sizing: border-box;
