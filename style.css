@@ -434,6 +434,7 @@ header {
   -o-object-fit: cover;
      object-fit: cover;
   padding: 0px 40px;
+  padding-bottom: 20px;
 }
 
 .table-price {
@@ -444,17 +445,20 @@ header {
 
 .table-description {
   text-align: center;
-  font-size: 1.3em;
+  font-size: 1.4em;
   line-height: 1.5em;
 }
 .table-description td {
   padding-bottom: 20px;
 }
+.table-description td {
+  max-width: 100px;
+}
 
 .table-info {
-  margin: 20px 0;
+  margin: 10px 0;
   padding-left: 20px;
-  font-size: 1.4em;
+  font-size: 1.2em;
   color: rgba(75, 75, 75, 0.6);
 }
 
