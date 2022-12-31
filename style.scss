@@ -30,7 +30,7 @@ html{
     }
     
 }
-//burger 
+/*!burger */
 .burger{
     cursor: pointer;
     display: none;
@@ -94,7 +94,7 @@ html{
         left: 0;
     }
 }
-//header
+/*! header */
 .fixed-header{
     background-color: #0d0e0e;
     width: 100%;
@@ -193,7 +193,7 @@ header{
     
 }
 
-//cat memes section 
+/*! cat memes section  */
 
 .cat-memes {
     margin: 30px 0;
@@ -306,7 +306,7 @@ header{
 }
 
 
-//masia blocks
+/*! masia blocks   */
 
 
 .masia {
@@ -412,7 +412,8 @@ header{
         opacity: 1;
     }
 }
-//table
+
+/*! table  */
 
 .select-cat{
     padding: 40px 0 100px 0;
@@ -499,7 +500,7 @@ header{
 }
 
 
-// cat facts
+/*! cat facts */
 
 
 .cat-facts {
@@ -642,7 +643,7 @@ header{
 
 }
 
-//bubble maker
+/*! bubble maker */
 .box{
     position: relative;
     
@@ -746,7 +747,7 @@ header{
         transform:  translateY(-8200%);
     }
 }
-//footer
+/*!footer*/
 
 footer{
     background-color: #0d0e0e;

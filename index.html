@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- load google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cute+Font&family=Quicksand:wght@400;500;700&display=swap"
         rel="stylesheet">
+    <!-- connect styles -->
     <link rel="stylesheet" href="style.css">
     <title>Masya</title>
 
@@ -18,13 +20,16 @@
     <header>
         <div class="container header-wrapper">
             <a href="#" class="logo">CatsForLife</a>
+            <!-- navigation menu -->
             <nav class="cats-nav">
                 <a class="nav-item" href="#masia">Masya</a>
                 <a class="nav-item" href="#cat-memes">Cat Memes</a>
                 <a class="nav-item" href="#facts">Facts</a>
                 <a class="nav-item" href="#table">Choose a Cat </a>
+                <!-- button to spawn cats -->
                 <button class="spawn-cat "><span>Spawn Cats</span></button>
             </nav>
+            <!-- mobile navigation menu -->
             <div class="burger">
                 <span class="line"></span>
                 <span class="line"></span>
@@ -34,38 +39,45 @@
     </header>
     <section class="masia">
         <div class="container masia__wrapper">
-
+            <!-- heading for Masya section -->
             <h2 class="masia__heading">
                 I want to dedicate this website to my cat who passed away in November... She was the best disabled cat I
                 could ever imagine! That's some photos and stories
                 of her!
             </h2>
+            <!-- anchor point for Masya section-->
             <div id="masia" style="height:100px;"></div>
             <div class="masia-blocks">
-
+                <!-- block for first story -->
                 <div class="story-block">
-
+                    <!-- image for first story -->
                     <div class="story-block__img">
                         <img class="masia-photo"
                             src="https://i.pinimg.com/750x/6a/73/f4/6a73f4825f0064157d1ccfe47cdf9c29.jpg" alt="">
                     </div>
+                    <!-- date for first story -->
                     <div class="story-block__date">
                         Summer 2021
                     </div>
+                    <!-- text for first story -->
                     <div class="story-block__text">
                         My friend was on a sleepover at my apartment. I was sleeping on the floor and in the morning
                         Masya
                         woke me up because she wanted some hugs. She was sooo pretty that morning.
                     </div>
                 </div>
+                <!-- block for second story -->
                 <div class="story-block">
+                    <!-- image for second story -->
                     <div class="story-block__img">
                         <img class="masia-photo"
                             src="https://i.pinimg.com/750x/04/ba/e7/04bae78af2851324ecc3d1a8e1c3234c.jpg" alt="">
                     </div>
+                    <!-- date for second story -->
                     <div class="story-block__date">
                         March 2022
                     </div>
+                    <!-- text for second story -->
                     <div class="story-block__text">
                         The last picture I took of my precius girl.. and the last time I saw her in this life.. i
                         believe we
@@ -73,14 +85,18 @@
                     </div>
 
                 </div>
+                <!-- block for third story -->
                 <div class="story-block">
+                    <!-- image for third story -->
                     <div class="story-block__img">
                         <img class="masia-photo"
                             src="https://i.pinimg.com/750x/14/ba/72/14ba722a459bf04931346b1a7c7bbc4d.jpg" alt="">
                     </div>
+                    <!-- date for third story -->
                     <div class="story-block__date">
                         In some time in 2021 ?
                     </div>
+                    <!-- text for third story -->
                     <div class="story-block__text">
                         I came from my school , threw a backpack on the floor and went to take a shower. By the time I
                         finished, she has been sweety sleeping already:')
@@ -90,11 +106,15 @@
 
             </div>
         </div>
+        <!-- background line since without it looks a little bit empty and unfinished + adds coziness and almost the color of Masya -->
         <div id="masia-line" class="line-through-blocks"></div>
     </section>
+    <!-- cat carousel section -->
     <section class="cat-memes">
         <div class="container cat-wrapper">
+            <!-- anchor point for cat memes section-->
             <h2 id="cat-memes"><span id="cutie-heading">Cutie cats</span> </h2>
+            <!-- block which contains images from carousel and images themselves-->
             <div class="cat-memes-holder">
                 <img class="cutie-img fade"
                     src="https://i.pinimg.com/564x/93/db/65/93db65f8542f1e85e1bac1a12db47747.jpg" alt="">
@@ -114,7 +134,11 @@
                     src="https://i.pinimg.com/564x/0f/ed/9c/0fed9c0b80036ba1ede7d5101bd270e0.jpg" alt="">
                 <img class="cutie-img fade"
                     src="https://i.pinimg.com/564x/34/4a/c2/344ac24d229d6bbe08bc6514e77eb265.jpg" alt="">
+
+                <!-- first list  -->
                 <ul class="cutie-dots">
+
+                    <!-- dots for navigation through carousel -->
                     <li class="dot"></li>
                     <li class="dot"></li>
                     <li class="dot"></li>
@@ -125,6 +149,7 @@
                     <li class="dot"></li>
 
                 </ul>
+                <!-- arrows fot navogation through carousel -->
                 <div class="prev arrow"><span class="prev-span"></span></div>
                 <div class="next arrow"> <span class="next-span"></span></div>
             </div>
@@ -137,13 +162,19 @@
 
         <div class="container cat-facts__wrapper">
 
+            <!--anchor point for cat facts section and heading-->
             <div id="facts" class="facts-heading">
                 <span>Cool cat facts you may not know</span>
             </div>
+            <!-- block holdings both halfs of facts -->
             <div class="facts-wrapper">
+                <!-- half of the fact blocks -->
                 <div class="fact-half1">
+                    <!-- First fact block -->
                     <div class="fact-block">
+                        <!-- basically text of the block -->
                         <div class="fact-block__info">
+
                             <div class="fact-block__title">
                                 Don't like citrus
                             </div>
@@ -151,16 +182,19 @@
                                 The smell is too toxic for them. Some cats like potatoes and bananas.
                             </div>
                         </div>
+                        <!-- making an independent holder for image so it can be later responsived -->
                         <div class="fact-block__img">
                             <img src="https://img.freepik.com/premium-photo/kitten-aapricots_748076-1606.jpg?w=2000"
                                 alt="">
                         </div>
                     </div>
-
+                    <!-- second block of first half -->
                     <div class="fact-block">
+                        <!-- reversed image place  -->
                         <div class="fact-block__img">
                             <img src="https://i.pinimg.com/564x/11/c4/04/11c4049a869a9e7498039ecafc1cb7a7.jpg" alt="">
                         </div>
+                        <!-- the same text block -->
                         <div class="fact-block__info">
                             <div class="fact-block__title">
                                 Can poop
@@ -171,6 +205,7 @@
                         </div>
 
                     </div>
+                    <!-- third block of first half -->
                     <div class="fact-block">
                         <div class="fact-block__info">
                             <div class="fact-block__title">
@@ -186,6 +221,7 @@
                     </div>
                 </div>
                 <div class="fact-half2">
+                    <!-- first block of second half -->
                     <div class="fact-block">
                         <div class="fact-block__info">
                             <div class="fact-block__title">
@@ -200,6 +236,7 @@
                                 alt="">
                         </div>
                     </div>
+                    <!--  second block of second half -->
                     <div class="fact-block">
                         <div class="fact-block__img">
                             <img src="https://i.pinimg.com/564x/ef/62/9a/ef629a6a997f2b47e49aecb0c86b8af1.jpg" alt="">
@@ -216,18 +253,24 @@
 
                     </div>
                 </div>
+                <!-- background line since without it looks a little bit empty and unfinished -->
                 <div class="line-through-blocks"></div>
             </div>
         </div>
 
     </section>
+    <!-- table -->
     <section class="select-cat">
         <div class="chooshe-cat"><span>Think before doing something</span> </div>
+        <!-- anchor point -->
         <div id="table" style="height: 100px;"></div>
+
+        <!-- to center the section on bigger screens -->
         <div class="container table__wrapper">
 
 
             <table class="table">
+                <!-- row of names -->
                 <tr class="table-names">
                     <td>
                         Sphynx
@@ -240,6 +283,7 @@
 
                     </td>
                 </tr>
+                <!-- row of images  -->
                 <tr class="table-imgs">
                     <td class="table-img">
                         <img src="https://www.meme-arsenal.com/memes/d58b4358c3f1bcab478fffac02dfad97.jpg" alt="">
@@ -253,7 +297,7 @@
                         <img src="https://www.meme-arsenal.com/memes/ccdf73fd731e9477538847fbc892053d.jpg" alt="">
                     </td>
                 </tr>
-
+                <!-- i guess you know the row of what(price) -->
                 <tr class="table-price">
                     <td>
                         $1760 – $4400
@@ -265,6 +309,7 @@
                         Free
                     </td>
                 </tr>
+                <!-- some stupid jokes -->
                 <tr class="table-description">
                     <td>
                         Will behave like an egyptian god. Turns into sPIGnx
@@ -277,28 +322,34 @@
                     </td>
                 </tr>
             </table>
+            <!-- sorry, i didnt know a better thing to write in the table:) -->
             <div class="table-info">(Dont take it serious it is a joke)*</div>
         </div>
     </section>
 
 
-
+    <!-- a section from which bubbles should come but i couldn't find the perfect image for my need although
+        i spent more than 5 hours on search so lets suppose that bubbles come from there -->
     <section class="bubble-maker">
         <div class="bubble-maker__wrapper">
             <div class="bubble-maker-info">
+                <!-- score menu or something -->
                 <div class="bubbles-data">
                     <div class="catched">Caught: <span class="killed-score">0</span> </div>
                     <div class="total-bubbles">Summoned: <span class="summoned-score">0</span> </div>
 
                 </div>
+                <!-- mentioning so the user would not be confused why bubbles are randomly spread above the footer -->
                 <div class="where-bubble-come-from">(bubbles come from the box below)</div>
 
 
             </div>
+            <!-- the box's image itself -->
             <img class="box"
                 src="https://img.freepik.com/free-photo/open-cardboard-box_1101-424.jpg?1&w=2000&t=st=1672081185~exp=1672081785~hmac=d5a782d4e2629636b981d641c397d36cffa432e5d32d3df103d40ae20f4fe29a"
                 alt="">
 
+            <!-- the cats that are randomly chosen to be in the bubbles with js -->
             <div class="bubble-maker-images">
                 <img class="bubble-maker-image"
                     src="https://cdn-icons-png.flaticon.com/512/1234/1234920.png?w=1380&t=st=1672013904~exp=1672014504~hmac=00d94c46cb38cae55d0e2fa10eb9a6e90210507edb9aa8cc09f12abac91ce133"
@@ -316,8 +367,10 @@
 
         </div>
     </section>
+
     <footer id="footer" class="footer">
         <div class="container footer__wrappper">
+            <!-- second list -->
             <ul class="footer-links">
                 <li class="footer-link"><a href="#footer">Instagram</a></li>
                 <li class="footer-link"><a href="#footer">Github</a></li>
@@ -327,6 +380,7 @@
             </ul>
         </div>
     </footer>
+    <!-- connecting js -->
     <script src="script.js"></script>
 </body>
 

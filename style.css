@@ -1,3 +1,4 @@
+/*  setting basic font for all elements and reset default styles for padding, margin, and box sizing */ 
 * {
   padding: 0;
   margin: 0;
@@ -6,6 +7,7 @@
   box-sizing: border-box;
 }
 
+/* set link colors and remove underline */
 a {
   color: aliceblue;
   text-decoration: none;
@@ -15,20 +17,24 @@ li {
   list-style: none;
 }
 
+/* to make nav menu link transition a bit slowlier and prettier not some random teleportation */
 html {
   scroll-behavior: smooth;
 }
 
+/* set max width for container and center it so all the content would be always centered on every screen */
 .container {
   max-width: 1200px;
   margin: 0 auto;
 }
+/* on smaller screens adding padding so the content would not stick to the sides  */
 @media screen and (max-width: 1200px) {
   .container {
     padding: 0 10px;
   }
 }
 
+/*!burger */
 .burger {
   cursor: pointer;
   display: none;
@@ -43,10 +49,11 @@ html {
   margin: 5px auto 15px auto;
   transition: all 0.3s ease-in-out;
 }
+/* last line of burger menu has smaller bottom margin */
 .line:last-child {
   margin-bottom: 5px;
 }
-
+/* on smaller screens, display the burger menu and animate it when clicked */
 @media screen and (max-width: 880px) {
   .burger {
     display: block;
@@ -63,6 +70,7 @@ html {
     opacity: 1;
     transform: translateY(-19px) rotate(-45deg);
   }
+  /* set nav menu to fixed position and hide it off screen */
   .cats-nav {
     position: fixed;
     left: -100%;
@@ -87,6 +95,9 @@ html {
     left: 0;
   }
 }
+/*! header */
+
+/* a header style when you start scrolling  */
 .fixed-header {
   background-color: #0d0e0e;
   width: 100%;
@@ -95,7 +106,7 @@ html {
   top: 0;
   left: 0;
 }
-
+/* basic header style */
 header {
   transition: 0.3s;
   width: 100%;
@@ -104,8 +115,9 @@ header {
   z-index: 1000000000000000;
   padding: 20px 0px;
 }
-
+/* button that "spawns"  cats */
 .spawn-cat {
+   /* disable text selection on the button */
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -143,9 +155,11 @@ header {
 
 .header-wrapper {
   width: 100%;
+  /* flex property for making elements in one row */
   display: flex;
   color: aliceblue;
 }
+/* on smaller screens adding padding so the content would not stick to the sides  */
 @media screen and (max-width: 1200px) {
   .header-wrapper {
     padding: 0 10px;
@@ -153,7 +167,9 @@ header {
 }
 
 .cats-nav {
+  /* with margin left it will go to left as much as possible */
   margin-left: auto;
+/* making links in a row */
   display: flex;
   gap: 40px;
   align-items: center;
@@ -181,15 +197,18 @@ header {
   margin-left: 20px;
 }
 
+/*! cat memes section  */
 .cat-memes {
   margin: 30px 0;
   padding: 30px 0;
   box-sizing: border-box;
   background-color: #f8f6f5;
 }
+/* setting min height so on small screens the images will be the same size */
 .cat-memes .cutie-img {
   min-height: 490px;
 }
+
 .cat-memes .cat-wrapper {
   text-align: center;
   margin: 0 auto;
@@ -202,6 +221,7 @@ header {
 .cat-memes #cutie-heading:hover {
   color: #c1947d;
 }
+/* basic arrow styles */
 .cat-memes .arrow {
   cursor: pointer;
   position: absolute;
@@ -220,6 +240,7 @@ header {
   height: 40px;
   border: 4px solid aliceblue;
 }
+/* right arrow styles */
 .cat-memes .arrow .next-span {
   top: 25%;
   right: -10%;
@@ -227,6 +248,7 @@ header {
   border-bottom: none;
   transform: translateX(-50%) rotate(-45deg);
 }
+/* left arrow styles */
 .cat-memes .arrow .prev-span {
   top: 25%;
   left: -10%;
@@ -244,7 +266,7 @@ header {
   top: 39%;
   right: -10px;
 }
-
+/* styling the container of carousel */
 .cat-memes-holder {
   display: flex;
   max-width: 900px;
@@ -255,6 +277,7 @@ header {
   align-items: center;
   flex-direction: column;
 }
+/* making images to fit pretty in setted size */
 .cat-memes-holder img {
   width: 100%;
   max-height: 520px;
@@ -282,6 +305,7 @@ header {
   background-color: rgb(122, 119, 119);
 }
 
+/*! masia blocks   */
 .masia {
   position: relative;
   padding-top: 100px;
@@ -306,12 +330,13 @@ header {
   justify-content: space-around;
   align-items: stretch;
 }
+/* making blocks to break in 2 rows on smaller screens  */
 @media screen and (max-width: 1200px) {
   .masia-blocks {
     flex-wrap: wrap;
   }
 }
-
+/* positioning first background line */
 #masia-line {
   top: 50%;
 }
@@ -320,7 +345,7 @@ header {
     height: 40vh;
   }
 }
-
+/* styles for background brown line */
 .line-through-blocks {
   width: 100vw;
   height: 40vh;
@@ -329,6 +354,7 @@ header {
   z-index: -1;
   top: 25%;
 }
+/* positioning  background line */
 @media (min-height: 1200px) {
   .line-through-blocks {
     height: 25vh;
@@ -347,6 +373,7 @@ header {
   }
 }
 
+
 .story-block {
   box-shadow: 4px 11px 31px -6px rgba(0, 0, 0, 0.73);
   padding: 20px;
@@ -354,6 +381,7 @@ header {
   margin: 20px 0;
   background-color: #f8f6f5;
 }
+/* making block the size of the whole available width on smaller devices */
 @media screen and (max-width: 800px) {
   .story-block {
     max-width: 90%;
@@ -368,6 +396,7 @@ header {
   font-size: 1.3em;
 }
 
+/* making photos look good  */
 .masia-photo {
   width: 100%;
   max-height: 350px;
@@ -381,7 +410,7 @@ header {
   -webkit-animation: fade 1.5s;
           animation: fade 1.5s;
 }
-
+/* animation for carousel */
 @-webkit-keyframes fade {
   0% {
     opacity: 0.4;
@@ -399,6 +428,7 @@ header {
     opacity: 1;
   }
 }
+/*! table  */
 .select-cat {
   padding: 40px 0 100px 0;
   background-color: #f8f6f5;
@@ -411,8 +441,10 @@ header {
 .table__wrapper {
   box-shadow: 4px 11px 31px -6px rgba(0, 0, 0, 0.73);
   border-radius: 10px;
+  /* letting to scroll horizontally through overflow of table  */
   overflow-x: auto;
 }
+/* disabling unpretty scrollbar that apppears through overflow of table  */
 .table__wrapper::-webkit-scrollbar {
   display: none;
 }
@@ -427,7 +459,7 @@ header {
   font-weight: 500;
   line-height: 2.5em;
 }
-
+/* setting   images to be prettier for blocks size   */
 .table-img img {
   max-width: 400px;
   height: auto;
@@ -475,11 +507,14 @@ header {
   color: #c1947d;
 }
 
+/*! cat facts */
+/* centering heading and positioning it */
 .cat-facts .facts-heading {
   margin: 0 auto;
   top: -120px;
   text-align: center;
 }
+/* on smaller screens to make it look more appropriate */
 @media screen and (max-width: 1045px) {
   .cat-facts .facts-heading {
     top: -250px;
@@ -501,6 +536,7 @@ header {
   gap: 10%;
   margin: 50px auto;
 }
+/* make inside flex elements break on smaller screens  */
 @media screen and (max-width: 1180px) {
   .facts-wrapper {
     flex-wrap: wrap;
@@ -523,6 +559,7 @@ header {
   justify-content: center;
   align-items: center;
 }
+/* replacing colored and reversed blocks so they would go one by one */
 @media screen and (max-width: 1200px) {
   .fact-block:nth-child(1) {
     order: 2;
@@ -578,6 +615,7 @@ header {
   margin: 0 auto;
   max-width: 300px;
 }
+/* the same history of images setting to cover the box they are in */
 .fact-block__img img {
   border-radius: 5px;
   width: 100%;
@@ -596,6 +634,7 @@ header {
   gap: 50px;
   margin: 0 auto;
 }
+/* setting gap between two gaps so you cant tell they are not one block on small screens */
 @media screen and (max-width: 1180px) {
   .fact-half2 {
     margin-top: 30px;
@@ -603,6 +642,7 @@ header {
   }
 }
 
+/*! bubble maker */
 .box {
   position: relative;
   width: 100%;
@@ -612,7 +652,7 @@ header {
   -o-object-position: top;
      object-position: top;
 }
-
+/* styles for info box */
 .bubble-maker-info {
   border-top: 13px solid aliceblue;
   margin-top: 50px;
@@ -626,6 +666,7 @@ header {
   padding: 15px 0;
   flex-wrap: wrap;
 }
+/* making it higher on small screens so all data can be shown when it breaks */
 @media (max-width: 400px) {
   .bubble-maker-info {
     height: 170px;
@@ -661,6 +702,7 @@ header {
   display: none;
 }
 
+/* style for bubble */
 .bubble {
   position: relative;
   border-radius: 50%;
@@ -673,6 +715,7 @@ header {
           animation: bubbleFly 30s linear;
 }
 
+/* style for bubble image */
 .bubble-inside {
   border-radius: 50%;
   z-index: 100000000000000000000000;
@@ -687,6 +730,7 @@ header {
   position: relative;
 }
 
+/* animatiton for bubbles that basically lets them "fly" */
 @-webkit-keyframes bubbleFly {
   0% {
     transform: translateY(0%);
@@ -704,6 +748,7 @@ header {
     transform: translateY(-8200%);
   }
 }
+/*!footer*/
 footer {
   background-color: #0d0e0e;
   height: 120px;
@@ -712,6 +757,7 @@ footer {
   justify-content: center;
 }
 
+/* making links wrap on smaller screens  */
 .footer-links {
   gap: 10px;
   flex-wrap: wrap;
@@ -733,6 +779,7 @@ footer {
   font-size: 1.4em;
   transition: 0.5s;
 }
+/* hover effect */
 .footer-link a:hover {
   color: #c1947d;
 }
